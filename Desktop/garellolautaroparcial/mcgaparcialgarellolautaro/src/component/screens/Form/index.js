@@ -2,33 +2,39 @@ import './style.css';
 import React from 'react';
 import { Field, Form } from "react-final-form";
 import { BrowserRouter, Link, Route } from 'react-router-dom';
+import HomeCard from '../Home';
 
 const FormUser = (props) => {
     return (
         <BrowserRouter>
-        <div className="ContainerForm">
-            <Form onSubmit={() => {}}>
-                {
-                    ({handleSubmit}) => (
+            <Route exact path = "/EditForm">
+                <div className="ContainerForm">
+                    <Form onSubmit={() => {}}>{
+                        ({handleSubmit}) => (
                         <form onSubmit={handleSubmit}>
-                            <div className="FormProps">
-                                <h1>Alumnos</h1>
-                                <label>Nombre: </label>
-                                <input defaultValue={props.name} type="text"/>
-                                <label>Año: </label>
-                                <input defaultValue={props.year} type="text"/>
-                                <Link className="link" to="/EditUser">
-                                    <button class="btn" type="submit">Guardar información</button>
-                                </Link>
-                                <button class="btn" type="submit">Agregar contadores</button>
-                            </div>
-                        </form>
-                    )
-                }
-            </Form>
-        </div>
-        <Route exact path="/EditUser" component={Form}></Route>
-    </BrowserRouter>
+                    <div className="FormProps">
+                    <h1>Alumnos</h1>
+                    <div className="UserEdit">
+                        <label>Nombre: </label>
+                        <input defaultValue={props.name} type="text"/>
+                    </div>
+                    <div className="YearEdit">
+                        <label>Año: </label>
+                        <input defaultValue={props.year} type="text"/>
+                    </div>
+                    <div className="ButtonsForm">
+                        <Link className="link" to="/">
+                            <button class="BtnForm" type="submit">Guardar información</button>
+                        </Link>
+                        <button class="BtnForm" type="submit">Agregar contadores</button>
+                    </div>
+                    </div>
+                    </form>)}
+                    </Form>
+                </div>
+            </Route>
+            <Route exact path="/" component={HomeCard}></Route>
+        </BrowserRouter>
     );
 };
 

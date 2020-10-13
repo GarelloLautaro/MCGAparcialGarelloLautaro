@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import '../components/App.css';
+import '../component/App.css';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import Home from './screens/Home';
 import Form from './screens/Form';
@@ -17,14 +17,14 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          <ul className="Menu">
-            <li><Link to="/EditUser">Sign In</Link></li>
-          </ul>
-          <Switch>
-            <Route exact path="/EditUser"><Form /></Route>
-          </Switch>
+      <div className="App">
+        <div className="Home">
+          <Home 
+            name={this.state.name}
+            year={this.state.year}
+          />
         </div>
+      </div>
       </BrowserRouter>
     );
   }

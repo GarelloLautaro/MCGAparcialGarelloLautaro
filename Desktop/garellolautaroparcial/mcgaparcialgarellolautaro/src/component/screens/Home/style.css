@@ -17,3 +17,47 @@
     background-color: rgb(234, 234, 234);
     border-radius: 10px 10px 10px 10px;
 }
+
+.UserInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.NameUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 85%;
+    padding: 20px;
+    font-style: italic;
+}
+
+.Year {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-style: italic;
+}
+
+.ButtonsHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    font-style: italic;
+}
+
+.BtnHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cabin', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background: violet;
+    color: black;
+    border-radius: 20px 20px 20px 20px;
+    float: right;
+}
