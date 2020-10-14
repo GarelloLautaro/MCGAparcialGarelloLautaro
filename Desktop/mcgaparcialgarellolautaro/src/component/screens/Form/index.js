@@ -3,6 +3,7 @@ import React from 'react';
 import { Field, Form } from "react-final-form";
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import HomeCard from '../Home';
+import CounterList from '../CountersHome';
 
 function FormUser(props) {
   return (
@@ -57,7 +58,7 @@ function FormUser(props) {
           </div>
         </form>
       </Route>
-      <Route exact path="/Counter" component={FormUser}></Route>
+      <Route exact path="/Counter" component={CounterList}></Route>
     </BrowserRouter>
   );
 };
