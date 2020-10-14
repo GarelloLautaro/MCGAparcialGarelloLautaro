@@ -1,21 +1,19 @@
 import React from 'react';
 
 const CounterCard = (props) => {
-    return (
-        <ul className="CounterStructure">
-            <li>
-                Creado:{props.created}
-            </li>
-            <li>
-                Actualizado:{props.updated}
-            </li>
-            <li className="CounterInfo">
-                <button className="ButtonCounter">-</button>
-                <div>{props.counter}</div>
-                <button className="ButtonCounter">+</button>
-                <button className="ButtonCounter">Eliminar</button>
-            </li>
-        </ul>
-    )
+  return (
+    <form className="ContainerHome">
+      <div className="CounterStructure">
+        <label>Creado:{props.content.created}</label>
+        <label>Actualizado:{props.content.updated}</label>
+        <div className="CounterInfo">
+          <input type="button" className="ButtonCounter" value="-" />
+          <input type="button" className="ButtonCounter" value="+" />
+          <input type="button" className="ButtonCounter" value="Eliminar" />
+        </div>
+      </div>
+    </form>
+  )
 }
+
 export default CounterCard;
