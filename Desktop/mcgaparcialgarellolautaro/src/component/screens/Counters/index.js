@@ -4,8 +4,8 @@ const CounterCard = (props) => {
   return (
     <form className="ContainerHome">
       <div className="CounterStructure">
-        <label>Creado:{props.content.created}</label>
-        <label>Actualizado:{props.content.updated}</label>
+        <label>Creado:</label>
+        <label>Actualizado:</label>
         <div className="CounterInfo">
           <input type="button" className="ButtonCounter" value="-" />
           <input type="button" className="ButtonCounter" value="+" />
