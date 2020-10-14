@@ -8,7 +8,7 @@ function FormUser(props) {
   return (
     <BrowserRouter>
       <Route exact path="/Home">
-        <form className="ContainerForm">
+        <form className="ContainerHome">
           <div className="HomeProps">
             <h2>Alumno</h2>
             <div className="UserInfo">
@@ -33,21 +33,27 @@ function FormUser(props) {
         </form>
       </Route>
       <Route exact path="/EditForm">
-        <form className="form">
-          <h2>Alumno</h2>
-          <div>
-            <Field className="inputField" name="name" component="input" placeholder={props.name} />
-          </div>
-          <div>
-            <Field className="inputField" name="year" component="input" placeholder={props.year} />
-          </div>
-          <div>
-            <Link className="link" to="/Home">
-              <button className="buttonS" onClick={props.handleInputChange}>Guardar Información</button>
-            </Link>
-            <Link className="link" to="/Counter">
-              <button className="buttonS">Agregar Contador</button>
-            </Link>
+        <form className="ContainerForm">
+          <div className="FormProps">
+            <h2>Alumno</h2>
+            <div className="UserInfoEdit">
+              <div className="UserNameEdit">
+                <p>Usuario:</p>
+                <Field className="inputField" name="name" component="input" placeholder={props.name} />
+              </div>
+              <div className="UserYearEdit">
+                <p>Año: </p>
+                <Field className="inputField" name="year" component="input" placeholder={props.year} />
+              </div>
+            </div>
+            <div className="ButtonsEdit">
+              <Link className="link" to="/Home">
+                <button className="BtnEdit" onClick={props.handleInputChange}>Guardar Información</button>
+              </Link>
+              <Link className="link" to="/Counter">
+                <button className="BtnEdit" disabled="disable">Agregar Contador</button>
+              </Link>
+            </div>
           </div>
         </form>
       </Route>
